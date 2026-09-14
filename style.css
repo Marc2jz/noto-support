@@ -1,0 +1,38 @@
+:root {
+  --ink: #23201f;
+  --muted: #6b6560;
+  --paper: #faf8f4;
+  --rule: #e4ded4;
+  --accent: #2f5fd0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 .4rem; letter-spacing: -.01em; }
+h2 { font-size: 1.15rem; margin: 2.4rem 0 .5rem; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.6rem 0 .3rem; }
+p, li { color: var(--ink); }
+.lede { font-size: 1.15rem; color: var(--muted); margin: 0 0 2rem; }
+.meta { color: var(--muted); font-size: .9rem; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+ul { padding-left: 1.15rem; }
+li { margin: .35rem 0; }
+.cards { display: grid; gap: .75rem; margin-top: 1.5rem; }
+.card {
+  display: block; padding: 1rem 1.1rem; border: 1px solid var(--rule);
+  border-radius: 12px; background: #fff; text-decoration: none; color: var(--ink);
+}
+.card strong { display: block; font-size: 1.05rem; }
+.card span { color: var(--muted); font-size: .92rem; }
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: .95rem; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #ece7e0; --muted: #a09991; --paper: #16140f; --rule: #35302a; --accent: #8fb0ff; }
+  .card { background: #1e1b16; }
+}
