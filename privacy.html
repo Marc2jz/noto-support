@@ -9,7 +9,7 @@
   <p class="meta">Applies to Noto for iPad. Last updated 14 September 2026.</p>
 
   <h2>The short version</h2>
-  <p>Noto has no account system, no servers of its own, and no analytics. Your notes are files on your iPad and are never uploaded anywhere. The one time Noto uses the network is to read a calendar feed you added yourself.</p>
+  <p>Noto has no account system, no servers of its own, and no analytics. Your notes are files on your iPad and are never uploaded anywhere. Noto uses the network in exactly two places: reading a calendar feed you added yourself, and playing a YouTube video you paste into a note and then tap play on.</p>
 
   <h2>What Noto stores</h2>
   <p>Your notes, their pages, any PDFs and images you import, and your settings — all inside Noto’s own container on this device. Deleting the app deletes all of it.</p>
@@ -18,11 +18,15 @@
   <p>Nothing. There is no usage tracking, no crash reporting, no advertising identifier, and no third-party code of any kind in this app — it is built entirely with Apple’s own frameworks.</p>
   <p>That is a statement about the app. If you choose to <em>contact</em> us, what you send reaches a person — see <a href="#support">Getting help</a> below.</p>
 
-  <h2>The one network request Noto makes</h2>
-  <p>If you add a calendar feed — a Canvas feed link, a Google Calendar iCal address, or any other <code>.ics</code> URL — Noto downloads that address over HTTPS to show your events beside your notes, and refreshes it periodically while you keep it. The request goes to the address you typed and nowhere else, it carries nothing about you or your notes, and the events are cached on this device. Remove the feed and Noto stops making the request. Add no feed and Noto never touches the network at all.</p>
+  <h2>Calendar feeds</h2>
+  <p>If you add a calendar feed — a Canvas feed link, a Google Calendar iCal address, or any other <code>.ics</code> URL — Noto downloads that address over HTTPS to show your events beside your notes, and refreshes it periodically while you keep it. The request goes to the address you typed and nowhere else, it carries nothing about you or your notes, and the events are cached on this device. Remove the feed and Noto stops making the request.</p>
+
+  <h2>YouTube videos in your notes</h2>
+  <p>If you paste a YouTube link into a note, Noto shows it as a card — no network request happens yet. Tap play, and Noto loads that video from YouTube (<code>youtube-nocookie.com</code>), right there on the page. That request goes to YouTube, carries nothing about your notes, and only happens when you tap play; the card itself works offline, but the video won’t play without a connection. YouTube’s own privacy terms cover that request, the same way they would if you opened the same video in Safari.</p>
+  <p>Add no calendar feed and play no video, and Noto never touches the network at all.</p>
 
   <h2>Permissions Noto may ask for</h2>
-  <p>Your device’s Calendar, only if you turn on the calendar strip, and only to read events to show beside your notes — that is a local read, separate from the feed above. The microphone, only when you start a recording inside a note; recordings are saved with that note on this device. Noto never asks for either until you use the feature, and declining leaves the rest of the app working.</p>
+  <p>Your device’s Calendar, only if you turn on the calendar strip, and only to read events to show beside your notes — that is a local read, separate from the feed above. Notifications, only if you turn on due reminders for a connected calendar feed — Noto schedules a reminder the evening before and the morning of an assignment’s due date, entirely on this device, from the feed you already added; nothing about a reminder is sent anywhere. The microphone, only when you start a recording inside a note; recordings are saved with that note on this device. Noto never asks for any of these until you use the feature, and declining leaves the rest of the app working.</p>
 
   <h2>Backups and things you send out yourself</h2>
   <p>Backup, export and share are yours to aim. When you export a PDF or save a backup, it goes wherever you choose — Files, iCloud Drive, another app — and from that point it is covered by that destination’s terms, not this one.</p>
