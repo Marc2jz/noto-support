@@ -1,3 +1,32 @@
+# 2026-10-20 — Privacy and Acknowledgements for optional sign-in
+
+Noto's studentnotes branch `fable/account-sign-in` adds optional Sign in with
+Apple and Sign in with Google (device-local profile: display name for the Home
+greeting, photo in Settings > Account) and links Google's GoogleSignIn-iOS
+10.0.0 SDK into every build. Branch `fable/privacy-sign-in`, from `origin/main`
+at `d43574f`. Marc asked for this PR ("Draft the PR now"); Marc merges.
+
+- `privacy.html`: the short version no longer says "no account system" or
+  "exactly two places"; a new "Signing in with Apple or Google" section says
+  what is kept on the iPad (provider identifier, shared email, display name,
+  chosen photo), that none of it is synced, backed up, exported or sent, the
+  foreground validity check, sign out vs. remove profile, and the keychain
+  record that survives app deletion and is cleared on the next first launch.
+  "No third-party code of any kind" is replaced with the one outside library.
+- `acknowledgements.html`: "bundles no third-party code" is replaced; Google
+  Sign-In and the seven packages it resolves (AppAuth, GTMAppAuth, GTM Session
+  Fetcher, App Check Core, GoogleUtilities, Promises, Interop for Google SDKs)
+  are listed under the Apache License 2.0, each read from its LICENSE file in
+  the resolved SwiftPM checkout (none ships a NOTICE file). AuthenticationServices
+  and PhotosUI were added to the Apple frameworks list.
+- Every statement was checked against the app source on `fable/account-sign-in`
+  (AccountStore, AccountAuthentication, AccountPersistence, AccountPhoto,
+  StudentNotesApp scene-phase hook).
+- Google sign-in is still unconfigured (the button shows as unavailable). The
+  page covers both providers so it needs no second change when Google is on.
+- Publish with the app build that ships sign-in, not before. After merge,
+  verify privacy.html and acknowledgements.html twice with curl.
+
 # 2026-10-18 — Hosted legal and credits pages for Noto About
 
 Marc requested Privacy, Terms and Acknowledgements open on the existing GitHub

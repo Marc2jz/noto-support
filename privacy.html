@@ -6,20 +6,27 @@
 <main>
   <a class="back" href="index.html">&larr; Noto</a>
   <h1>Privacy Policy</h1>
-  <p class="meta">Applies to Noto for iPad. Last updated 9 October 2026.</p>
+  <p class="meta">Applies to Noto for iPad. Last updated 20 October 2026.</p>
 
   <h2>The short version</h2>
-  <p>Noto has no account system, no servers of its own, and no analytics. Your notes are files on your iPad and are never uploaded anywhere. Noto uses the network in exactly two places: reading a calendar feed you added yourself, and playing a YouTube video you paste into a note and then tap play on.</p>
+  <p>Signing in is optional, Noto has no servers of its own, and there are no analytics. Your notes are files on your iPad and are never uploaded anywhere. Noto uses the network only for things you start: reading a calendar feed you added yourself, playing a YouTube video you paste into a note and then tap play on, and signing in with Apple or Google if you choose to.</p>
 
   <h2>What Noto stores</h2>
-  <p>Your notes, their pages, any PDFs and images you import, and your settings — all inside Noto’s own container on this device, apart from the search entries described under <a href="#search">Search on your iPad</a> below. Deleting the app deletes the container.</p>
+  <p>Your notes, their pages, any PDFs and images you import, your settings and, if you sign in, your profile — all inside Noto’s own container on this device, apart from the search entries described under <a href="#search">Search on your iPad</a> and the small sign-in record described under <a href="#sign-in">Signing in with Apple or Google</a> below. Deleting the app deletes the container.</p>
 
   <h2 id="search">Search on your iPad</h2>
   <p>Noto adds each note’s title, the name of the folder it is in, its course code (if it has one) and the text in it to your iPad’s on-device Spotlight index, so you can find a note from the iPad’s system search without opening Noto. The text is what you typed, the words Noto reads from your handwriting on this iPad, and the text of PDFs you imported. The index is kept by iPadOS on this iPad: Noto does not send it anywhere, it is not part of a Noto backup or export, and a note you move to Recently Deleted is taken out of it.</p>
   <p>You can turn this off for Noto in iPad Settings &gt; Siri &amp; Search (or Settings &gt; Apps &gt; Noto). Your notes themselves are not changed.</p>
 
+  <h2 id="sign-in">Signing in with Apple or Google</h2>
+  <p>Noto works fully without signing in. If you choose to sign in with Apple or Google, it is so that Home can greet you by name and Settings &gt; Account can show your photo, on this iPad. Noto has no account system of its own and no Noto password; your password stays with Apple or Google.</p>
+  <p>What Noto keeps: the identifier Apple or Google gives Noto for your account, the email address it shares (if it shares one), a display name and, if you pick one, a profile photo. The display name starts from the name the provider shares, and you can change it. The photo is one you choose: iPadOS shows you the picker and gives Noto only that photo, so Noto never asks for access to your photo library, and Noto shrinks it and strips its location and other embedded details before saving it. All of this stays on this iPad. It is not synced, it is not part of a Noto backup or export, it is not sent to us, and your notes are not tied to it.</p>
+  <p>Apple or Google handles the sign-in itself, and their privacy terms cover that part. If you sign in with Google, Google’s sign-in library keeps its sign-in token on this iPad. While you are signed in, each time Noto opens or comes back to the screen it asks Apple or Google whether that sign-in is still valid; if you have removed Noto from your Apple or Google account, Noto signs you out on this iPad. That check carries nothing about your notes.</p>
+  <p>Sign out hides your name and photo until you sign in again; they stay on this iPad. Remove profile erases the name and photo from this iPad. Neither one touches your notes or your Apple or Google account. To end Noto’s sign-in at the provider’s end as well, remove Noto from the Sign in with Apple list in your Apple Account settings, or from the third-party connections in your Google Account. Change password in Settings &gt; Account opens your Apple or Google account page, because that is where your password lives.</p>
+  <p>Noto keeps a small record of which account is signed in, in this iPad’s keychain, which iPadOS can keep after the app is deleted. If you reinstall Noto, it clears that record the first time it opens.</p>
+
   <h2>What Noto collects</h2>
-  <p>Nothing. There is no usage tracking, no crash reporting, no advertising identifier, and no third-party code of any kind in this app — it is built entirely with Apple’s own frameworks.</p>
+  <p>Nothing. There is no usage tracking, no crash reporting and no advertising identifier. Noto is built with Apple’s own frameworks plus one outside library, Google Sign-In, which is used only if you sign in with Google; the <a href="acknowledgements.html">Acknowledgements</a> list it and the open-source code it relies on.</p>
   <p>That is a statement about the app. If you choose to <em>contact</em> us, what you send reaches a person — see <a href="#support">Getting help</a> below.</p>
 
   <h2>Calendar feeds</h2>
@@ -27,7 +34,7 @@
 
   <h2>YouTube videos in your notes</h2>
   <p>If you paste a YouTube link into a note, Noto shows it as a card — no network request happens yet. Tap play, and Noto loads that video from YouTube (<code>youtube-nocookie.com</code>), right there on the page. That request goes to YouTube, carries nothing about your notes, and only happens when you tap play; the card itself works offline, but the video won’t play without a connection. YouTube’s own privacy terms cover that request, the same way they would if you opened the same video in Safari.</p>
-  <p>Add no calendar feed and play no video, and Noto never touches the network at all.</p>
+  <p>Add no calendar feed, play no video and don’t sign in, and Noto never touches the network at all.</p>
 
   <h2>Permissions Noto may ask for</h2>
   <p>Your device’s Calendar, only if you turn on the calendar strip, and only to read events to show beside your notes — that is a local read, separate from the feed above. Notifications, only if you turn on due reminders for a connected calendar feed — Noto schedules a reminder the evening before and the morning of an assignment’s due date, entirely on this device, from the feed you already added; nothing about a reminder is sent anywhere. The microphone, only when you start a recording inside a note; recordings are saved with that note on this device. The camera, only when you scan paper pages into a note; the scanned pages are saved in that note on this device. Noto never asks for any of these until you use the feature, and declining leaves the rest of the app working.</p>
