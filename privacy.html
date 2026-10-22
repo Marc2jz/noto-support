@@ -66,7 +66,7 @@
 
   <h2 id="purchases">Purchases</h2>
   <p>Noto Plus is sold through the App Store. Apple handles the payment and tells this app only whether the purchase is active. Noto never sees your payment details.</p>
-  <p>Buying needs a sign-in with Apple or Google, so that the purchase belongs to an account. Noto attaches to the purchase a random-looking code made on this iPad from your sign-in; it is not your email or name, and nobody can work either out from it. Apple keeps it with the purchase record, so a future Noto website could recognise the same account. Nothing else about you is added.</p>
+  <p>Buying needs a sign-in with Apple or Google, so that the purchase belongs to an account. Noto attaches to the purchase an account token: a code (a UUID) that this iPad works out from which provider you signed in with and the identifier that provider gave Noto for your account. Your email address and name are not part of it. The App Store sends the token back with the purchase’s transaction, so the purchase can be matched to the account, and a future Noto website could work out the same code from a verified sign-in. Apple receives that token with the purchase, not your email. Nothing else about you is added, and the token is not stored separately on this iPad. Restoring purchases and Noto Plus itself follow your Apple ID, not your Noto sign-in.</p>
 
   <h2>Children</h2>
   <p>Noto itself collects nothing from anyone, a child included; the Google sign-in described under <a href="#collects">What Noto collects</a> is optional, and Sign in with Apple or no sign-in avoids it. Noto shows no ads and has no social or messaging features.</p>
