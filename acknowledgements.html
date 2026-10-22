@@ -13,15 +13,29 @@
   <p class="lede">The tools and people behind Noto.</p>
 
   <h2>Apple frameworks</h2>
-  <p>Noto is built with Apple’s frameworks and its own InkLab handwriting engine. It bundles no third-party code.</p>
+  <p>Noto is built with Apple’s frameworks and its own InkLab handwriting engine. The one outside library it includes is Google Sign-In, used only if you choose to sign in with Google, together with the open-source code that library relies on (listed below).</p>
   <ul>
     <li>SwiftUI and UIKit for the interface.</li>
     <li>Metal and PencilKit for drawing and Apple Pencil support.</li>
     <li>PDFKit for working with PDFs, and AVFoundation for audio.</li>
     <li>Vision and Core Spotlight for on-device recognition and search.</li>
     <li>StoreKit for App Store purchases.</li>
+    <li>AuthenticationServices for Sign in with Apple, and PhotosUI for choosing a profile photo.</li>
   </ul>
   <p>The interface also uses Apple’s SF Symbols.</p>
+
+  <h2>Open-source software</h2>
+  <p>Optional sign-in with Google uses Google Sign-In for iOS and the libraries it depends on. Each is distributed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.</p>
+  <ul>
+    <li><a href="https://github.com/google/GoogleSignIn-iOS">Google Sign-In for iOS</a></li>
+    <li><a href="https://github.com/openid/AppAuth-iOS">AppAuth for iOS</a></li>
+    <li><a href="https://github.com/google/GTMAppAuth">GTMAppAuth</a></li>
+    <li><a href="https://github.com/google/gtm-session-fetcher">GTM Session Fetcher</a></li>
+    <li><a href="https://github.com/google/app-check">App Check Core</a></li>
+    <li><a href="https://github.com/google/GoogleUtilities">GoogleUtilities</a></li>
+    <li><a href="https://github.com/google/promises">Promises</a></li>
+    <li><a href="https://github.com/google/interop-ios-for-google-sdks">Interop for Google SDKs</a></li>
+  </ul>
 
   <h2>InkLab</h2>
   <p>InkLab is Noto’s handwriting engine, responsible for capturing and rendering the ink you write.</p>
