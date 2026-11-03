@@ -37,3 +37,33 @@ Pages site instead of filling the app's About screen.
   three links, and the subscription privacy link uses the hosted policy. The
   duplicate native privacy screen was removed. Do not release the app links to
   the two new pages until their public URLs are verified live.
+
+# 2026-11-03 — Legal and support pages become redirects to notonotes.com
+
+## What changed and why
+
+- `privacy.html`, `terms.html`, `acknowledgements.html` and `support.html` are now
+  small redirect pages (same `<title>`, `rel=canonical`, `meta refresh` with 0 delay,
+  a visible notice with a plain link, styled by `style.css`). No scripts, no tracking.
+  The old text is gone from these files (it remains in git history).
+- `index.html` cards now link straight to `https://notonotes.com/support`, `/privacy`,
+  `/terms` and `/acknowledgements`. Nothing else on it was changed.
+- Why: the App Store listing and older app versions still link to these four URLs. The
+  old text is outdated (privacy.html says "no account system, no servers of its own"
+  while the app now links to a notonotes.com account). The maintained pages live on
+  the website.
+
+## Merge order (do not skip)
+
+- Merge this only AFTER the website version that carries the moved app facts
+  (the current privacy/terms/acknowledgements/support content) is live at
+  notonotes.com. Merging earlier would redirect App Store users to pages that lack
+  those facts. Verify the four notonotes.com URLs answer 200 with the expected text first.
+
+## Open PRs that touch the same files
+
+- PRs #6, #8, #9, #10 add privacy.html text for features not yet shipped; PR #11 adds
+  support.html email reports. All five edit files that are now redirects and will
+  conflict. Not closed or edited here.
+- After this redirect, their text belongs in the website's `src/LegalPages.jsx` or the
+  `/support` page, when those features ship.
